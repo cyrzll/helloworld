@@ -1,0 +1,23 @@
+---
+import "../styles/global.css"
+const { title } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+
+        <meta property="og:title" content="Hello World!" />
+        <meta property="og:description" content="First html code" />
+        <meta property="og:type" content="website" />
+	</head>
+	<body class="w-full min-h-screen">
+        <div class="w-max h-full bg-transparent">
+            <slot/>
+        </div>
+	</body>
+</html>
